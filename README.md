@@ -54,13 +54,17 @@ name                                          expense_ratio
 TAURUS TAXSHIELD DIVIDEND PAYOUT DIRECT PLAN  2.47
 ```
 
+### Thanks
+
+Thanks much to Gaurav Rastogi, CEO of Kuvera who was generous enough to allow this. Relevant thread : https://www.reddit.com/r/IndiaInvestments/comments/8r0k9q/kuveracli_a_simple_program_to_download_funds_data/e0oz5wf/
+
 ### Donation
 
 If you found the program useful please consider donating to the awesome folks at Python Software Foundation. Refer : https://www.python.org/psf/donations/
 
 ### Disclaimer
 
-The data is from Kuvera and I don't hold responsibility for any inconsistency in data.
+No one holds responsibility for any inconsistency in data.
 
 ### LICENSE
 
