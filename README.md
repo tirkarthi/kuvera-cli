@@ -2,6 +2,11 @@
 
 I built this program since I had some limitations on the Kuvera platform where I was not able to sort by expense ratio, 1st year gains etc.
 
+### Files (Refreshed as of 13/03/2020)
+
+* data.db - SQLite file with funds data
+* data.csv - CSV file with funds data
+
 ### Installation
 
 * Clone the repo
@@ -10,10 +15,6 @@ I built this program since I had some limitations on the Kuvera platform where I
 * Run `python crawler.py` which downloads the funds data inside the folder `data`
 * Run `python insert-db.py` which inserts the data into SQLite database named `data.db` and also generates a CSV named `data.csv`
 
-### Files
-
-* data.db - SQLite file with funds data
-* data.csv - CSV file with funds data
 
 ### Sample use cases
 
@@ -52,6 +53,72 @@ sqlite> select name, expense_ratio  from funds order by expense_ratio desc limit
 name                                          expense_ratio
 --------------------------------------------  -------------
 TAURUS TAXSHIELD DIVIDEND PAYOUT DIRECT PLAN  2.47
+```
+
+### Schema
+
+```sqlite
+sqlite> .mode line
+sqlite> select * from funds order by returns_year_1 desc limit 1;
+          portfolio_turnover =
+                        code = RGRGD2-DP
+                    swp_flag = Y
+                    lump_min = 1000.0
+                    stp_flag = Y
+                  face_value = 10.0
+               sip_available = Y
+             sip_maximum_gap = 60.0
+                returns_date = 2020-03-12
+           returns_inception = 3.9046
+              returns_year_5 = 9.955
+              returns_year_1 = 37.6925
+              returns_year_3 = 13.2844
+              sip_multiplier = 1.0
+                        ISIN = INF205K01NH3
+        investment_objective = To provide returns that closely corresponds to returns providedby Religare Gold Exchange Traded Fund.
+                  volatility = 25.2216
+                        name = Invesco India Gold Dividend Payout Direct Plan
+                  fund_house = INVESCOMUTUALFUND_MF
+               last_nav_date = 2020-03-11
+                last_nav_nav = 13.5802
+                fund_manager = Krishna Cheemalapati
+               fund_category = Fund of Funds
+             lump_multiplier = 1.0
+          redemption_allowed = Y
+                      direct = Y
+                   fund_type = Others
+   redemption_amount_minimum = 1000.0
+                    category = Equity
+                     sip_min = 500.0
+                 detail_info = https://invescomutualfund.com/literature-and-form?tab=Complete
+redemption_quantity_multiple = 0.001
+                    nav_date = 2020-03-12
+                     nav_nav = 13.8013
+              switch_allowed = Y
+         lump_min_additional = 1000.0
+                   fund_name = INVESCO Mutual Fund
+                     sip_max = 999999999.0
+               expense_ratio = 0.09
+               crisil_rating = Moderately High
+  purchase_amount_multiplier =
+                     instant = N
+ redemption_quantity_minimum = 0.001
+              lump_available = Y
+                    lump_max = 10000000000000.0
+  redemption_amount_multiple = 1.0
+                        plan = AS N WHEN
+                  short_name = Invesco India Gold Dividend Payout
+                  short_code = invesco
+                reinvestment = N
+                        slug = invesco-india-gold-dividend-payout--RGRGD2-DP
+        channel_partner_code = 120RGD2
+                  tax_period = 1095
+               maturity_type = Open Ended
+                         aum = 180
+                  jan_31_nav = 9.3346
+                 merged_code =
+                 merged_name =
+                 merged_date =
 ```
 
 ### Thanks
